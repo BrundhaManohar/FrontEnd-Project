@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flyway</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="./asserts/fly.jpg" alt="fly" />
+        Flyway
+      </div>
+      <div class="menu-items">
+        <div><a href="#">Home</a></div>
+        <div><a href="#">Book</a></div>
+        <div><a href="#">Package</a></div>
+        <div><a href="#">Services</a></div>
+        <div><a href="#">Gallery</a></div>
+        <div><a href="#">About</a></div>
+        <button
+          type="button"
+          class="register"
+          data-toggle="modal"
+          data-target="#registerModal"
+        >
+          Register
+        </button>
+        <button
+          type="button"
+          class="register"
+          data-toggle="modal"
+          data-target="#loginModal"
+        >
+          Login
+        </button>
+      </div>
+    </header>
+    <section class="body">
+      <h1>Welcome to Flyway Tours and Travelles</h1>
+      <div class="card-sec">
+        <div class="card">
+          <img src="./asserts/India.jpg" alt="Card image" class="card-img" />
+          <div class="card-content">
+            <h2 class="card-title">INDIA</h2>
+            <p class="card-text">
+              what we inherit from our ancestors and from our past. India is a
+              land of varied cultures and traditions.
+            </p>
+            <a href="#" class="card-button">Read More</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./asserts/paris.jpg" alt="Card image" class="card-img" />
+          <div class="card-content">
+            <h2 class="card-title">PARIS</h2>
+            <p class="card-text">
+              Paris, France's capital, is a major European city and a global
+              center for art, fashion, gastronomy and culture.
+            </p>
+            <a href="#" class="card-button">Read More</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./asserts/germany.jpg" alt="Card image" class="card-img" />
+          <div class="card-content">
+            <h2 class="card-title">GERMANY</h2>
+            <p class="card-text">
+              Germany is known for its long and rich history, one that has put
+              it at the forefront of European.
+            </p>
+            <a href="#" class="card-button">Read More</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./asserts/london.jpg" alt="Card image" class="card-img" />
+          <div class="card-content">
+            <h2 class="card-title">FRANCE</h2>
+            <p class="card-text">
+              French culture is derived from an ancient civilization composed of
+              a complex mix of Celtic.
+            </p>
+            <a href="#" class="card-button">Read More</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./asserts/us.jpg" alt="Card image" class="card-img" />
+          <div class="card-content">
+            <h2 class="card-title">AMERICA</h2>
+            <p class="card-text">
+              Cultural heritage tourism involves visits to immovable historic
+              sites which might include industrial,
+            </p>
+            <a href="#" class="card-button">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="book-now">
+        <button>BOOK NOW</button>
+      </div>
+    </section>
+    <!-- second task -->
+    <div class="booking-body">
+      <div class="container">
+        <!-- Left Section with Image -->
+        <div class="left">
+          <img src="./asserts/1.jpg" alt="Brand or Company Image" />
+        </div>
+
+        <!-- Right Section with Form -->
+        <div class="right">
+          <h2>Book Your Trip</h2>
+          <form id="bookingForm">
+            <div class="form-group">
+              <label for="destination">Where to</label>
+              <select id="destination" required>
+                <option value="">Select a Destination</option>
+                <option value="Paris">Paris</option>
+                <option value="New York">New York</option>
+                <option value="Tokyo">Tokyo</option>
+                <option value="Dubai">Dubai</option>
+                <option value="Sydney">Sydney</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="persons">How Many Persons</label>
+              <input type="number" id="persons" min="1" required />
+            </div>
+
+            <div class="form-group">
+              <label for="startDate">Start Date</label>
+              <input type="date" id="startDate" min="" required />
+            </div>
+
+            <div class="form-group">
+              <label for="endDate">End Date</label>
+              <input type="date" id="endDate" min="" required />
+            </div>
+
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea
+                id="description"
+                minlength="50"
+                maxlength="500"
+                required
+              ></textarea>
+            </div>
+
+            <div class="button-container">
+              <button type="button" onclick="submitForm()">Book Now</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Gallery section -->
+    <div class="package-gallery">
+      <h2>Package Gallery</h2>
+      <div class="row">
+        <div class="package-card">
+          <img src="./asserts/2.jpg" alt="Paris" />
+          <h3>Paris</h3>
+          <p>
+            Experience the city of lights with iconic landmarks like the Eiffel
+            Tower and Louvre.
+          </p>
+          <p class="price">Price: $1500 USD</p>
+          <p class="rating">Rating: ★★★★☆</p>
+          <button>Book Now</button>
+        </div>
+
+        <div class="package-card">
+          <img src="./asserts/3.jpg" alt="New York" />
+          <h3>New York</h3>
+          <p>
+            Discover the vibrant culture of NYC, from Times Square to Central
+            Park.
+          </p>
+          <p class="price">Price: $1800 USD</p>
+          <p class="rating">Rating: ★★★★★</p>
+          <button>Book Now</button>
+        </div>
+
+        <div class="package-card">
+          <img src="./asserts/4.jpg" alt="Tokyo" />
+          <h3>Tokyo</h3>
+          <p>
+            Explore the mix of tradition and modernity in Japan’s bustling
+            capital.
+          </p>
+          <p class="price">Price: $2000 USD</p>
+          <p class="rating">Rating: ★★★★☆</p>
+          <button>Book Now</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="package-card">
+          <img src="./asserts/5.jpg" alt="Dubai" />
+          <h3>Dubai</h3>
+          <p>
+            Marvel at architectural wonders like the Burj Khalifa and Palm
+            Islands.
+          </p>
+          <p class="price">Price: $1700 USD</p>
+          <p class="rating">Rating: ★★★★☆</p>
+          <button>Book Now</button>
+        </div>
+
+        <div class="package-card">
+          <img src="./asserts//6.jpg" alt="Sydney" />
+          <h3>Sydney</h3>
+          <p>Enjoy scenic views at the Sydney Opera House and Bondi Beach.</p>
+          <p class="price">Price: $1600 USD</p>
+          <p class="rating">Rating: ★★★☆☆</p>
+          <button>Book Now</button>
+        </div>
+
+        <div class="package-card">
+          <img src="./asserts/7.jpg" alt="Rome" />
+          <h3>Rome</h3>
+          <p>Step into history with tours of the Colosseum and the Vatican.</p>
+          <p class="price">Price: $1400 USD</p>
+          <p class="rating">Rating: ★★★★☆</p>
+          <button>Book Now</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="package-card">
+          <img src="./asserts/4.jpg" alt="Barcelona" />
+          <h3>Barcelona</h3>
+          <p>Experience the art and architecture of Gaudi’s beautiful city.</p>
+          <p class="price">Price: $1300 USD</p>
+          <p class="rating">Rating: ★★★☆☆</p>
+          <button>Book Now</button>
+        </div>
+
+        <div class="package-card">
+          <img src="./asserts/7.jpg" alt="London" />
+          <h3>London</h3>
+          <p>
+            Visit famous landmarks such as Big Ben, the Tower of London, and
+            more.
+          </p>
+          <p class="price">Price: $1900 USD</p>
+          <p class="rating">Rating: ★★★★★</p>
+          <button>Book Now</button>
+        </div>
+
+        <div class="package-card">
+          <img src="./asserts/3.jpg" alt="Bangkok" />
+          <h3>Bangkok</h3>
+          <p>Discover the bustling streets, temples, and markets of Bangkok.</p>
+          <p class="price">Price: $1200 USD</p>
+          <p class="rating">Rating: ★★★★☆</p>
+          <button>Book Now</button>
+        </div>
+      </div>
+    </div>
+    <!-- service section -->
+    <div class="services-section">
+      <h2>Our Services</h2>
+      <div class="services-container">
+        <div class="service-card">
+          <img src="./asserts/animal-shelter.png" alt="Affordable Hotel Icon" />
+          <h3>Affordable Hotel</h3>
+          <p>
+            Book from a range of affordable and comfortable hotel options to
+            suit every budget.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <img src="./asserts/restaurant.png" alt="Food & Drinks Icon" />
+          <h3>Food & Drinks</h3>
+          <p>
+            Enjoy delicious cuisine and beverages with carefully selected meal
+            options.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <img src="./asserts/guidelines.png" alt="Safety Guide Icon" />
+          <h3>Safety Guide</h3>
+          <p>
+            Guides and information to ensure you travel safely and confidently.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <img src="./asserts/24-7.png" alt="24/7 Support Icon" />
+          <h3>24/7 Support</h3>
+          <p>
+            We’re here to assist you around the clock, ensuring a smooth
+            experience.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <img
+            src="./asserts/customer-service.png"
+            alt="Custom Packages Icon"
+          />
+          <h3>Custom Packages</h3>
+          <p>
+            Create personalized travel packages to meet your specific needs and
+            preferences.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <img
+            src="./asserts/animal-shelter.png"
+            alt="Local Experiences Icon"
+          />
+          <h3>Local Experiences</h3>
+          <p>
+            Immerse yourself in authentic local experiences curated for your
+            trip.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Register Modal -->
+    <div
+      class="modal fade"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="registerModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="registerModalLabel">Register</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="registerForm" onsubmit="return validateForm()">
+              <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fullname"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contact">Contact</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="contact"
+                  required
+                  pattern="[0-9]{10}"
+                />
+              </div>
+              <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" required />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  required
+                  minlength="8"
+                />
+              </div>
+              <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" id="gender" required>
+                  <option value="">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p>
+              Already have an account?
+              <button
+                type="button"
+                class="register"
+                data-toggle="modal"
+                data-target="#loginModal"
+                onclick="closeRegistrationModal()"
+              >
+                Login here
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm" onsubmit="return validateLoginForm()">
+              <div class="form-group">
+                <label for="loginEmail">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="loginEmail"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="loginPassword"
+                  required
+                  minlength="8"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p>
+              Don't have an account?
+              <button
+                type="button"
+                class="register"
+                data-toggle="modal"
+                data-target="#registerModal"
+                onclick="closeLoginModal()"
+              >
+                Register
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="booking.js"></script>
+  </body>
+</html>
